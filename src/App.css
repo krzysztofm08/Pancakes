@@ -1,30 +1,48 @@
-.App {
-  text-align: center;
+.App__logo {
+  height: 25vmin;
+  pointer-events: none;
+  padding: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
+.App-logo__right {
+  height: 25vmin;
   pointer-events: none;
+  padding: 50px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .App__logo {
     animation: App-logo-spin infinite 20s linear;
+  }
+  .App-logo__right {
+    animation: App-logo-spin infinite 20s linear reverse;
   }
 }
 
-.App-header {
+.Site__title {
+  color: white;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Site__title {
+    animation: Site-title-color-change infinite 8s 3s linear;
+  }
+}
+
+.App__header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 35vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
+.App__link {
   color: #61dafb;
 }
 
@@ -34,5 +52,125 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-right-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes Site-title-color-change {
+  0% {
+    opacity: 1;
+    color: white;
+  }
+  10% {
+    opacity: 0.5;
+    color: darkorchid;
+  }
+  30% {
+    opacity: 1;
+    color: white;
+  }
+}
+
+body {
+  background-color: #282c34;
+}
+
+.Body__container {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  width: 70vw;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+}
+
+@media (max-width: 1350px) {
+  .App__logo {
+    height: 20vmin;
+    padding: 30px;
+  }
+  
+  .App-logo__right {
+    height: 20vmin;
+    padding: 30px;
+  }
+
+  .App__header {
+    min-height: 25vh;
+  }
+}
+
+@media (max-width: 900px) {
+  .App__header {
+    min-height: 15vh;
+  }
+  .Site__title {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .App__logo {
+    height: 15vmin;
+    padding: 15px;
+  }
+  
+  .App-logo__right {
+    height: 15vmin;
+    padding: 15px;
+  }
+
+  .App__header {
+    min-height: 10vh;
+  }
+
+  .Site__title {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .Body__container {
+    font-size: calc(8px + 2vmin);
+    width: 85vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .App__logo {
+    height: 15vmin;
+    padding: 5px;
+  }
+  
+  .App-logo__right {
+    height: 15vmin;
+    padding: 5px;
+  }
+
+  .App__header {
+    min-height: 8vh;
+  }
+
+  .Site__title {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .App__header {
+    font-size: calc(8px + 2vmin);
   }
 }
