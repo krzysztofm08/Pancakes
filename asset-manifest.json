@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Pancakes/static/css/main.0738eb72.chunk.css",
-    "main.js": "/Pancakes/static/js/main.deaa6328.chunk.js",
-    "main.js.map": "/Pancakes/static/js/main.deaa6328.chunk.js.map",
+    "main.css": "/Pancakes/static/css/main.d5656208.chunk.css",
+    "main.js": "/Pancakes/static/js/main.5cdeb041.chunk.js",
+    "main.js.map": "/Pancakes/static/js/main.5cdeb041.chunk.js.map",
     "runtime-main.js": "/Pancakes/static/js/runtime-main.8fc0de38.js",
     "runtime-main.js.map": "/Pancakes/static/js/runtime-main.8fc0de38.js.map",
-    "static/js/2.2ff9b6eb.chunk.js": "/Pancakes/static/js/2.2ff9b6eb.chunk.js",
-    "static/js/2.2ff9b6eb.chunk.js.map": "/Pancakes/static/js/2.2ff9b6eb.chunk.js.map",
+    "static/js/2.7455c5d7.chunk.js": "/Pancakes/static/js/2.7455c5d7.chunk.js",
+    "static/js/2.7455c5d7.chunk.js.map": "/Pancakes/static/js/2.7455c5d7.chunk.js.map",
     "static/js/3.c1092609.chunk.js": "/Pancakes/static/js/3.c1092609.chunk.js",
     "static/js/3.c1092609.chunk.js.map": "/Pancakes/static/js/3.c1092609.chunk.js.map",
     "index.html": "/Pancakes/index.html",
-    "static/css/main.0738eb72.chunk.css.map": "/Pancakes/static/css/main.0738eb72.chunk.css.map",
-    "static/js/2.2ff9b6eb.chunk.js.LICENSE.txt": "/Pancakes/static/js/2.2ff9b6eb.chunk.js.LICENSE.txt",
+    "static/css/main.d5656208.chunk.css.map": "/Pancakes/static/css/main.d5656208.chunk.css.map",
+    "static/js/2.7455c5d7.chunk.js.LICENSE.txt": "/Pancakes/static/js/2.7455c5d7.chunk.js.LICENSE.txt",
     "static/media/dorayaki-3943941_1280.a30c834d.png": "/Pancakes/static/media/dorayaki-3943941_1280.a30c834d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8fc0de38.js",
-    "static/js/2.2ff9b6eb.chunk.js",
-    "static/css/main.0738eb72.chunk.css",
-    "static/js/main.deaa6328.chunk.js"
+    "static/js/2.7455c5d7.chunk.js",
+    "static/css/main.d5656208.chunk.css",
+    "static/js/main.5cdeb041.chunk.js"
   ]
 }
