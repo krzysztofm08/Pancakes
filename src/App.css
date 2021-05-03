@@ -174,3 +174,34 @@ body {
     font-size: calc(8px + 2vmin);
   }
 }
+
+.form_className {
+  display: none;
+}
+
+.ShowAddRecipeButton {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.ShowAddRecipeButtonIcon {
+  color: green;
+  margin-right: 5px;
+}
+
+.Discard-new-recipe__button {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  transition: background-color .5s;
+  align-items: center;
+  padding: 5px;
+}
+
+.Discard-new-recipe-button__icon {
+  padding: 5px;
+  color: red;
+}

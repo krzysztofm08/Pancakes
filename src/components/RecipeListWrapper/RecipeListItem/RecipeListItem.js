@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './ListItem.css';
 import DeleteButton from '../../Buttons/DeleteButton.js';
+import EditButton from '../../Buttons/EditButton.js';
 
 
 const RecipeListItem = (props) => (
@@ -18,7 +19,10 @@ const RecipeListItem = (props) => (
                   <p>Cook: {props.cook}</p>
                   <p>Quantity: {props.quantity}</p>
                 </div>
-                <DeleteButton deleteFn={props.deleteFn}/>
+                <div className="RecipeContainerTop__buttons">
+                  <DeleteButton deleteFn={props.deleteFn}/>
+                  <EditButton editFn={props.editFn}/>
+                </div>
               </div>
             </div>
             <div className="Recipe__description">

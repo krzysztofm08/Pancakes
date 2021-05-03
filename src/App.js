@@ -3,6 +3,9 @@ import RecipeListWrapper from "./components/RecipeListWrapper/RecipeListWrapper.
 import Form from "./components/Form/Form.js";
 import './App.css';
 import React from 'react';
+import EditForm from './components/Form/EditForm';
+import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const initialStateItems= [
   {
@@ -95,6 +98,70 @@ class App extends React.Component {
     }));
 
   }
+
+  editRecipe = (e) => {
+    const editFormContainer = document.querySelector(".EditForm");
+    editFormContainer.style.display="inline";
+    const listItemWrapperId = e.target.closest(".RecipeContainerMainButtons__edit").closest(".listItem__wrapper").id;
+    //Title
+    const editedTitle = document.querySelector('input[name="editTitle"]');
+    editedTitle.value = this.state.items[listItemWrapperId].title;
+    //image
+    const editedImage = document.querySelector('input[name="editImage"]');
+    editedImage.value = this.state.items[listItemWrapperId].image;
+    //prep
+    const editedPrep = document.querySelector('input[name="editPrep"]');
+    editedPrep.value = this.state.items[listItemWrapperId].prep;
+    //cook
+    const editedCook = document.querySelector('input[name="editCook"]');
+    editedCook.value = this.state.items[listItemWrapperId].cook;
+    //quantity
+    const editedQuantity = document.querySelector('input[name="editQuantity"]');
+    editedQuantity.value = this.state.items[listItemWrapperId].quantity;
+    //ingredients
+    for (let i=0; i<10; i++) {
+      const editedIngredient = document.querySelector('input[name="editedIngredientItem'+i+'"]');
+      editedIngredient.value = this.state.items[listItemWrapperId].ingredients[i];
+    }
+    //instructions
+    for (let i=0; i<10; i++) {
+      const editedInstruction = document.querySelector('textarea[name="editedInstructionItem'+i+'"]');
+      editedInstruction.value = this.state.items[listItemWrapperId].instructions[i];
+    }
+    const editedInputId = document.querySelector('.hiddenInput');
+    editedInputId.value = listItemWrapperId;
+
+  }
+
+  showAddRecipe = () => {
+    const submitFormContainer = document.querySelector(".form_className");
+    submitFormContainer.style.display="inline";
+  }
+  /* Edited recipe submit */
+  submitRecipe = (e) => {
+    e.preventDefault();
+    const editRecipe = {
+      title: e.target[0].value,
+      image: e.target[1].value,
+      prep: e.target[2].value,
+      cook: e.target[3].value,
+      quantity: e.target[4].value,
+      ingredients: [e.target[5].value, e.target[6].value, e.target[7].value, e.target[8].value, e.target[9].value, e.target[10].value, e.target[11].value, e.target[12].value, e.target[13].value, e.target[14].value],
+      instructions: [e.target[15].value, e.target[16].value, e.target[17].value, e.target[18].value, e.target[19].value, e.target[20].value, e.target[21].value, e.target[22].value, e.target[23].value, e.target[24].value],
+    }
+    const editedInputId = e.target[25].value;
+    /* Update an array item */
+
+    const items = [...this.state.items.splice(editedInputId, 1, editRecipe)];
+
+    this.setState(prevState => ({
+      items: [...prevState.items],
+    }));
+
+    e.target.reset();
+
+  }
+
   
   render() {
     return (
@@ -109,10 +176,13 @@ class App extends React.Component {
       <body>
 
         <div className="Body__container">
+          <button className="ShowAddRecipeButton" onClick={this.showAddRecipe} ><FontAwesomeIcon icon={faPlusCircle} className="ShowAddRecipeButtonIcon"/>Add Recipe</button>
           <Form submitFn={this.addRecipe} />
+          <EditForm editFn={this.submitRecipe} />
           <RecipeListWrapper
             items={this.state.items}
             deleteFn={this.deleteRecipe}
+            editFn={this.editRecipe}
            />
         </div>
       </body>

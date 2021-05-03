@@ -17,6 +17,7 @@
     transition: background-color .5s;
     align-items: center;
     padding: 5px;
+    margin-right: 5px;
 }
   
 .Add-new-recipe__button:hover {
@@ -43,4 +44,74 @@
 
 .Add-new-recipe__container input {
     margin: 5px 5px 5px 0px;
+}
+
+.EditForm {
+    display: none;
+}
+
+.Edit-recipe__button {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    transition: background-color .5s;
+    align-items: center;
+    padding: 5px;
+}
+  
+.Edit-recipe__button:hover {
+    background-color: darkorchid;
+}
+  
+.Edit-recipe-button__icon {
+    padding: 5px;
+    color: green;
+}
+
+.Discard-new-recipe__button {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    transition: background-color .5s;
+    align-items: center;
+    padding: 5px;
+}
+  
+.Discard-new-recipe__button:hover {
+    background-color: darkorchid;
+}
+  
+.Discard-new-recipe-button__icon {
+    padding: 5px;
+    color: red;
+}
+
+.Add-new__recipe {
+    display: flex;
+    flex-direction: row;
+}
+
+.Discard-recipe__button {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    transition: background-color .5s;
+    align-items: center;
+    padding: 5px;
+}
+  
+.Discard-recipe__button:hover {
+    background-color: darkorchid;
+}
+  
+.Discard-recipe-button__icon {
+    padding: 5px;
+    color: red;
+}
+
+.hiddenInput {
+    display:none;
 }

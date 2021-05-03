@@ -14,15 +14,32 @@ const RecipeListWrapper = (props) => (
                 quantity= {item.quantity}
                 ingredients= {
                     item.ingredients.map(
-                        ingredientItem => (ingredientItem!=="" ? <li>{ingredientItem} </li> : null)
-                                        )
-                            }
+                        ingredientItem =>  {
+                            if (ingredientItem!=="" && ingredientItem!=="undefined") {
+                                return <li>{ingredientItem} </li>;
+                                }
+                            else {
+                            return null;
+                                }
+                             }
+                    )
+                }                   
+        
                 instructions= {
                     item.instructions.map(
-                        instructionItem => (instructionItem!=="" ?  <li>{instructionItem}</li> : null)
-                                        )
-                            }
+                        instructionItem => {
+                            if (instructionItem!=="" && instructionItem!=="undefined") {
+                                return <li>{instructionItem} </li>;
+                                }
+                            else {
+                            return null;
+                                }
+                             }
+                    )
+                }        
+                        
                 deleteFn= {props.deleteFn}
+                editFn= {props.editFn}
             />
         ))}
     </ul>

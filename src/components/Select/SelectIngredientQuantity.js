@@ -19,10 +19,10 @@ function AddInvisibleIngredientInputs(props) {
   let visibleInputsArray=[];
   let invisibleInputsArray=[];
   for (let i=0; i<props; i++) {
-    visibleInputsArray.push(<input placeholder="ingredientItem" name="ingredientItem"/>);
+    visibleInputsArray.push(<input placeholder="ingredientItem" name={"ingredientItem"+i}/>);
   }
   for (let i=props; i<10; i++) {
-    invisibleInputsArray.push(<input placeholder="ingredientItem" name="ingredientItem" className="ingredientItemInvisible"/>);
+    invisibleInputsArray.push(<input placeholder="ingredientItem" name={"ingredientItem"+i} className="ingredientItemInvisible"/>);
   }
   return <>{visibleInputsArray}{invisibleInputsArray}</>;
 }

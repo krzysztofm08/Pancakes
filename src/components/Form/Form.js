@@ -1,9 +1,15 @@
 import React from 'react';
 import { faBook } from "@fortawesome/free-solid-svg-icons";
+import { faBan } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SelectIngredientQuantity from "../Select/SelectIngredientQuantity.js";
 import SelectInstructionQuantity from "../Select/SelectInstructionQuantity.js";
 import './Form.css';
+
+function DiscardWindow () {
+    const submitFormContainer = document.querySelector(".form_className");
+    submitFormContainer.style.display="none";
+}
 
 const Form = ({submitFn}) => (
     <form
@@ -31,6 +37,10 @@ const Form = ({submitFn}) => (
             <button type="submit" className="Add-new-recipe__button">
                 <FontAwesomeIcon icon={faBook} className="Add-new-recipe-button__icon" />
                 Submit
+            </button>
+            <button type="button" className="Discard-new-recipe__button" onClick={DiscardWindow}>
+                <FontAwesomeIcon icon={faBan} className="Discard-new-recipe-button__icon" />
+                Cancel
             </button>
         </div>
         </div>

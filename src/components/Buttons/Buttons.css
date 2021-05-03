@@ -3,8 +3,18 @@
     margin-right: 5px;
     padding: 5px;
 }
+
+.RecipeContainerTop__buttons {
+    display: flex;
+    flex-direction: row;
+}
   
 .DeleteRecipe__icon {
     color: brown;
+    margin-right: 5px;
+}
+
+.EditRecipe__icon {
+    color: rgb(42, 75, 165);
     margin-right: 5px;
 }

@@ -19,10 +19,10 @@ function AddInvisibleInstructionInputs(props) {
   let visibleInputsArray=[];
   let invisibleInputsArray=[];
   for (let i=0; i<props; i++) {
-    visibleInputsArray.push(<textarea placeholder="instructiontItem" name="instructionItem"/>);
+    visibleInputsArray.push(<textarea placeholder="instructiontItem" name={"instructionItem"+i}/>);
   }
   for (let i=props; i<10; i++) {
-    invisibleInputsArray.push(<textarea placeholder="instructionItem" name="instructionItem" className="instructionItemInvisible"/>);
+    invisibleInputsArray.push(<textarea placeholder="instructionItem" name={"instructionItem"+i} className="instructionItemInvisible"/>);
   }
   return <>{visibleInputsArray}{invisibleInputsArray}</>;
 }
